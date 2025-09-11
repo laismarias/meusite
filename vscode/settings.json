@@ -1,0 +1,10 @@
+{
+    //quebra de linha
+ "editor.wordrap": "on",
+//save automatico
+"files.autoSave": "afaterDelay",
+"files.autoSaveDelay":1000,
+"editor.formatOnSave":true,
+"editor.fontSize":25
+
+}
