@@ -14,10 +14,15 @@ header{
 
     display: flex; /* FLEXBOX */
     justify-content: space-between;
-    align-items: center; /* alinhamento */
-    width: 100%;
+    align-items: center; /* EIXO Y*/
+    width: 100%; /* Largura TOTAL p/todos os 
+    dispostivos*/
 padding: .5rem 1rem;
 border-bottom: 1px solid #000;
+position: fixed;
 
+}
+h1{
+    padding-top: 1200px;
 }
 
