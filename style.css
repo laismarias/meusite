@@ -20,9 +20,51 @@ header{
 padding: .5rem 1rem;
 border-bottom: 1px solid #000;
 position: fixed;
+}
+/* nav */
+.menu-desktop{
+    display: none;
+}
+/* ul */
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
 
+
+    
+
+
+
+
+
+
+
+/* Responsividade */
+/* A partir de 768 */
+@media (min-width: 768px) {
+    .menu-desktop{
+        display: flex;
+        
+   
+    }
 }
-h1{
-    padding-top: 1200px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
