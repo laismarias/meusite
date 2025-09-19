@@ -1,70 +1,102 @@
 
+/* Cor DARK */
+:root,
+:root[data-theme="dark"]{
+    --cor-fundo::#1d1d1d;
+    --txt-menu-link: #eee;
+    --borda:#eee;
+    --icon-theme:#1d1d1d;
+
+
+
+}
+
+
+
+
+/* Cor light */
+:root[data-theme="light"]{
+    --cor-fundo:#eee;
+    --txt-menu-link:#1d1d1d;
+    --borda:#1d1d1d;
+
+
+}
+
+
 /* Reset CSS */
-*{
-margin: 0; /* MARGEM EXTERNA */
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0; /* MARGEM EXTERNA */
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #fdfdfd; /* COR FUNDO */
+  background: var(--cor-fundo  ); /* COR FUNDO */
 }
 
-header{
-
-    display: flex; /* FLEXBOX */
-    justify-content: space-between;
-    align-items: center; /* EIXO Y*/
-    width: 100%; /* Largura TOTAL p/todos os 
+header {
+  display: flex; /* FLEXBOX */
+  justify-content: space-between;
+  align-items: center; /* EIXO Y*/
+  width: 100%; /* Largura TOTAL p/todos os 
     dispostivos*/
-padding: .5rem 1rem;
-border-bottom: 1px solid #000;
-position: fixed;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #000;
+  position: fixed;
 }
 /* nav */
-.menu-desktop{
-    display: none;
+.menu-desktop {
+  display: none;
 }
 /* ul */
-.menu{
-    display: flex;
-    list-style: none;
-    gap: 1rem;
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
 }
+
+.menu-link {
+    text-decoration: none;
+}
+    
+.menu-text {
+    text-transform: uppercase;
+    color: var(--txt-menu-link);
+}
+
+
+
+#toggleTheme{
+    color:var(--icon-theme)
+    cursor:pointer; /* Aparencia seta mouse */
+}
+
+.menu-mobile{
+    positon:fixed
+    top: 0;
+    right:0;
+    align-items:center;
+    right:0;
+    transform:translateX();
+    background:
+     width:75%
+     display:flex;
+     flex-direction: column;
+     max-width: 320px;
+     padding-top: 4rem;
+     height:100vh;
+     border-left:1px solid 
 
 
     
 
 
-
-
-
-
-
+}
 /* Responsividade */
 /* A partir de 768 */
 @media (min-width: 768px) {
-    .menu-desktop{
-        display: flex;
-        
-   
-    }
+  .menu-desktop {
+    display: flex;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
