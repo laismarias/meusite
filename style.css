@@ -9,19 +9,30 @@
     --borda: #eee;
     --icon-theme: #eee;
 
+    --cor-titulo:#fff;
+    --cor-texto: #fff;
 }
 
 /* Cor Light */
 :root[data-theme='light'] {
-
     --cor-fundo: #eee;
     --fundo-secundario: #6b6b6b;
     --txt-menu-link: #1d1d1d;
     --borda: #1d1d1d;
     --icon-theme: #1d1d1d;
 
+     --cor-titulo: #1d1d1d;
+    --cor-texto: #1d1d1d;
 }
 
+
+/* Aparencia/Efeito Barra de Rolagem */
+html{
+    scroll-behavior: smooth;
+    /* efeito/ comportamento */
+    scrollbar-width: thin;
+    scrollbar-color: red transparent;
+}
 
 /* Reset CSS */
 * {
@@ -129,9 +140,14 @@ list-style: none;
  .menu-link.active .menu-text,
  .menu-link:hover .menu-text {
   color: red;
+
+ }
+ h1{
+    font-size: 2.5rem;
+    color: var();
  }
   section{
-    padding-top: 150px;
+    padding-top: 1500px;
     color: #fff;
   }
 
