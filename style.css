@@ -1,3 +1,6 @@
+/* Google fonts */
+
+
 
 /* Cor DARK */
 :root, 
@@ -142,15 +145,34 @@ list-style: none;
   color: red;
 
  }
+
+
+/* h1 base */
  h1{
     font-size: 2.5rem;
-    color: var();
+    color: var(--cor-titulo)
+    font-family
  }
-  section{
-    padding-top: 1500px;
-    color: #fff;
-  }
 
+
+ /* Reaproveitar para as seçoes */
+ #home{
+    padding: 3.5rem 1rem;
+
+ }
+
+ /* FlexBox da HOME */
+ #home{
+    display: flex;
+    flex-direction: column;
+ }
+
+
+ .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+ }
 
 
 /* Responsividade */
@@ -161,6 +183,29 @@ list-style: none;
     }
     .btn-menu-mobile{
       display: none; /* Em telas Menu hamburguer some */
-
-    }
+  }
+h1 {
+    font-size: 5rem;
 }
+}
+
+/* Telas 992 */
+@media(min-width: 992px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+}
+
+/* Telas 1400px */
+@media(min-width:1400px) {
+    h1 {
+        font-size: 7rem;
+    }
+
+}
+    
+
+
+
+
