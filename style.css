@@ -1,38 +1,66 @@
-/* Google fonts */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Gravitas+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap');
+
+/* 
+
+Alan Sans
+font-family: "Alan Sans", sans-serif;
+
+Libre Baskerville
+font-family: "Libre Baskerville", serif;
+
+Gravitas One
+ font-family: "Gravitas One", serif;
+
+Oswald:
+font-family: "Oswald", sans-serif;
+
+*/
 
 
 
+/* Fontes */
+:root {
+
+  --fonte-textos: "Alan Sans", sans-serif;
+  --fonte-titulo-h1: "Libre Baskerville", serif;
+  --fonte-subtitulo-h2: "Oswald", sans-serif;
+  --fonte-subtitulo-h3: "Gravitas One", serif;
+}
 
 
-
-/* Cor DARK */
+/* Color -> Dark */
 :root,
 :root[data-theme="dark"] {
-  --cor-fundo: #1d1d1d;
-  --fundo-secundario: #838383;
-  --txt-menu-link: #eee;
-  --borda: #eee;
-  --icon-theme: #eee;
+  --cor-fundo: #111217;
+  --cor-fundo-secundario:#28292E;
 
-  --cor-titulo: #fff;
-  --cor-texto: #fff;
+  --cor-text-menu-link: #7b7b7b;
+  --cor-borda: #f0f0f0ae;
+  --cor-icon-theme: #a0a0a0;
 
-  --houver-link:#f0f0f0;
-  --cor-link: #a3a2a2;
+  --cor-titulo: #eaeaea;
+  --cor-textos: #cacaca;
+
+  --hover-link: #f0f0f0;
+  --cor-link: #626262;
 
 }
 
-/* Cor Light */
+/* Color -> Light */
+:root,
 :root[data-theme="light"] {
-  --cor-fundo: #eee;
-  --fundo-secundario: #6b6b6b;
-  --txt-menu-link: #1d1d1d;
-  --borda: #1d1d1d;
-  --icon-theme: #1d1d1d;
+  --cor-fundo: #f0f0f0;
+  --cor-fundo-secundario:#c7c8c9;
+  --cor-text-menu-link: #b3b3b3;
+  --cor-borda: #111217;
+  --cor-icon-theme: #808080;
 
-  --cor-titulo: #1d1d1d;
-  --cor-texto: #1d1d1d;
-  --houver-link:#1d1d1d;
+  --cor-titulo: #111217;
+  --cor-textos: #111217;
+  
+  --hover-link: #111217;
+  --cor-link: #a3a2a2;
 
 }
 
@@ -40,42 +68,42 @@ html[data-theme="light"] .logo {
   filter: invert(1);
 }
 
-/* Aparencia/Efeito Barra de Rolagem */
+/* Aparencia/ Efeito Barra Rolagem */
 html {
   scroll-behavior: smooth;
-  /* efeito/ comportamento */
+  /* efeito / comportamento */
   scrollbar-width: thin;
-  scrollbar-color: red transparent;
+  scrollbar-color: var(--cor-fundo-secundario) transparent;
 }
 
 /* Reset CSS */
 * {
-  margin: 0; /* MARGEM EXTERNA */
+  margin: 0; /* Margem Externa */
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: var(--cor-fundo); /* COR FUNDO */
+  background: var(--cor-fundo);
+  color: var(--cor-textos);
 }
 
 header {
   /* FLEXBOX */
   display: flex;
-  justify-content: space-between; /* Eixo X */
-  align-items: center; /* EIXO Y */
-  width: 100%; /* Largura TOTAL p/ todos Dispositos */
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid var(--borda);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem; /* 1 rem = 16 pixels */
+  border-bottom: 0.1px solid var(--cor-borda);
   position: fixed;
-  z-index: 9999; /* Camadas */
+  z-index: 9999; /* CAMADAS */
   background: var(--cor-fundo);
 }
 
-
 .logo {
   width: 5rem; /* Comprimento */
-   height: auto; /* Altura */
+  height: auto;  /* Altura */
 }
 
 /* nav */
@@ -90,25 +118,27 @@ header {
   gap: 1.2rem;
 }
 
-/* a href */
+/* a */
 .menu-link {
   text-decoration: none;
 }
 
-/* SPAN  dentro do A HREF*/
+/* Span dentro do A HREF */
 .menu-text {
   text-transform: uppercase;
-  color:var(--cor-text-menu-link);
+  color: var(--cor-text-menu-link);
   font-family: var(--fonte-textos);
 }
 
+/* Icone Puro */
 #toggleTheme {
-  color: var(--icon-theme);
-  cursor: pointer; /* Aparencia Seta Mouse */
+  color: #a3a2a2;
+  font-size: 1.5rem;
+  cursor: pointer; /* seta-mouse */
 }
 
 #toggleTheme:hover {
-    color: var(--houver-link);
+  color: var(--hover-link);
 }
 
 .menu-mobile {
@@ -116,19 +146,19 @@ header {
   top: 0;
   right: 0;
   transform: translateX(100%);
-  background: var(--fundo-secundario);
-  width: 75%;
+  background: var(--cor-fundo-secundario);
+  width: 35%;
   display: flex;
   flex-direction: column;
   max-width: 320px;
-  padding-top: 4rem;
-  height: 100vh; /* viewport Height */
-  border-left: 1px solid var(--borda);
+  padding-top: 6rem;
+  height: 100vh; /* Viewport Height */
+  border-left: 1px solid var(--cor-borda);
   align-items: center;
 }
 
 .menu-mobile.active {
-  transform: translate(0%);
+  transform: translateX(0);
 }
 
 .menu-list {
@@ -141,8 +171,8 @@ header {
 .btn-menu-mobile {
   background: transparent;
   border: none;
-  color: var(--icon-theme);
-  font-size: 1.3rem;
+  color: var(--cor-icon-theme);
+  font-size: 1.5rem;
   margin-left: 1rem;
   align-items: center;
   justify-content: center;
@@ -159,20 +189,47 @@ header {
 .menu-item {
   text-align: center;
 }
+
 /* Herança */
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-  color:var(--houver-link);
+  color: var(--hover-link);
 }
 
-/* h1 base */
+/* h1 Base */
 h1 {
   font-size: 2.5rem;
-  color: var(--cor-titulo) font-family;
+  color: var(--cor-titulo);
+  font-family: var(--fonte-titulo-h3);
+  /* letter-spacing: ; */
 }
 
-/* Reaproveitar para as seçoes */
-#home {
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--fonte-subtitulo-h2);
+  /* font-weight: ; */
+  /*   letter-spacing: ; */
+  /* color: ; */
+}
+
+h3 {
+  font-size: 1.55rem;
+  font-family: var(--fonte-subtitulo-h3);
+  text-transform: uppercase;
+}
+
+p,
+span,
+li {
+  font-size: 1.5rem;
+}
+
+/* Reaproveitar para as seções */
+#home, 
+.projetos,
+.sobre,
+.contato {
   padding: 3.5rem 1rem;
 }
 
@@ -180,6 +237,7 @@ h1 {
 #home {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .main-content {
@@ -188,39 +246,181 @@ h1 {
   gap: 2rem;
 }
 
-/* Herança */
+/* HERANÇA */
 .menu-social i {
   color: var(--cor-link);
   font-size: 1.5rem;
 }
 
 .menu-social i:hover {
-    color: var(--houver-link); 
+  color: var(--hover-link);
+
+}
+
+.descricao-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 6.25rem 1rem 2rem;
+  background: #626262;
+  margin-top: -7.5rem;
+}
+
+.video iframe {
+  aspect-ratio: 16/9;
+  /* width: 100%; */
+}
+
+.descricao-video h2 {
+  font-size: 2rem;
+  text-transform: normal;
+  letter-spacing: 2px;
+  font-family: var(--fonte-subtitulo-h2);
+  text-align: center;
+  margin-top: -1rem;
+} 
+
+
+/* Projetos */
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projetos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.img-card {
+  width: 100%;
+  border-radius: 3rem;
+ /*  box-shadow: 4px 7px 15px 1px #e8e8e8; */
+  pointer-events: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+}
+
+.card-list {
+  list-style: none;
+}
+
+.card-title {
+  color:#d543ab; 
+  font-size: 2rem ;
+  font-weight: 400;
+}
+.card-list .cardi-item i {
+  margin-right: 15px;
+}
+
+.card-list .card-item {
+  margin-bottom: 10px;
+}
+
+.card-list .card-item:hover i {
+color: #d53ba9;
+
 }
 
 /* Responsividade */
-/* A partir de 768 */
-@media (min-width: 768px) {
-  .menu-desktop {
-    display: flex;
-  }
-  .btn-menu-mobile {
-    display: none; /* Em telas Menu hamburguer some */
-  }
-  h1 {
-    font-size: 5rem;
-  }
-  .header-logo {
-    min-width: 30%;
+/* telas Até 768px */
+@media (max-width: 768px) {
+  #home {
+    padding-top: 6rem;
   }
 }
 
+/* A partir de 768 voltar tela em flex */
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 6rem;
+  }
 
+  .menu-desktop {
+    display: flex;
+  }
+  
+  .btn-menu-mobile {
+    display: none;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+
+  }
+
+  .header-logo {
+    min-width: 30%;
+  }
+  #home, 
+  .projetos, 
+  .sobre {
+    padding: 8rem 6rem 4rem 6rem;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .descricao-video {
+    padding: 6.25rem 6rem 2rem 6rem;
+  }
+}
 
 /* Telas 992 */
 @media (min-width: 992px) {
   h1 {
     font-size: 6rem;
+  }
+
+  .projeto-card {
+    flex-direction: row;
+  }
+
+  .img-card {
+    width: 55%;
+  }
+
+  .card-reverse {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 7rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
   }
 }
 
@@ -229,4 +429,18 @@ h1 {
   h1 {
     font-size: 7rem;
   }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .descricao-video h2 {
+    font-size: 4rem;
+    text-align: start;
+  }
 }
+
