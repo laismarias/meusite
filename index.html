@@ -462,48 +462,62 @@
 
       <!-- formulario -->
       <div class="contato-formulario">
+
         <h2>FALE COMIGO</h2>
 
-        <form action="" method=" post">
+        <form action="https://formspree.io/f/mwprrvlj" method="post" class="form-contato">
+          
+          <!-- nome -->
+          <input type="text" name="nome" placeholder=" Nome completo *" required>
 
-          <input type="text" placeholder=" Nome completo *" required>
+          <!--Email  -->
+          <input type="email" name="email" placeholder=" Seu Email" required>
 
-          <input type="email" name="" id="" placeholder=" Seu Email" required>
+          <!-- Telefone -->
+          <input type="tel" name="telefone" id="telefone" placeholder="Seu telefone" required>
 
-       <!-- Telefone -->
-        <input type="tel" placeholder="Seu Telefone" required>
+          <!-- Assunto -->
+          <input type="text" name="assunto" placeholder="Assunto" required>     
 
-       <!-- Assunto -->
-        <input type="text" placeholder="Assunto" required>     
+          <!-- Campo Mensagem -->
+          <textarea name="" id=""  rows="5" placeholder="Digite a sua Mensagem" required></textarea>
 
-       <!-- Campo Mensagem -->
-        <textarea name="" id="" required></textarea>
-
-
-          <button type="submit">
+          <button type="submit" class="btn-primario"> 
             <span>Enviar</span>
+            <i class="bi bi-send"></i>
           </button>
 
         </form>
+      </div>
+
+    
+
+      <!-- Mapa -->
+      <div class="contato-mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.0285021155585!2d-46.73226447234641!3d-23.530452058450383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8bc4887b971%3A0xf7a3521fbafe0043!2sAv.%20Imperatriz%20Leopoldina%20-%20Vila%20Leopoldina%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1759966622457!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
       </div>
 
     </div>
-
-    <!-- Mapa -->
-     <div class="contato-mapa">-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.0285021155585!2d-46.73226447234641!3d-23.530452058450383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8bc4887b971%3A0xf7a3521fbafe0043!2sAv.%20Imperatriz%20Leopoldina%20-%20Vila%20Leopoldina%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1759966622457!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-     </div>
    
-
-
 
   </section>
 
 
   <footer>
-    <p> &copy; 2025. </p>
+    <p> &copy; 2025. Portfolio desenvolvido para fins educativos nas aulas do prof
+      <a href="'https://github.com/guuhferiani " target="_blank">
+        Senai Leopoldina - SP
+      </a>
+
+    desenvolvido por 
+    <a href="" target="_blank">
+      <i class=" bi bi-github"></i>
+      Lais Maria
+
+    </a>
+
+    </p>
   </footer>
 
   <!-- JS -->
